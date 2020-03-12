@@ -22,3 +22,6 @@ set ignorecase
 set smartcase
 set incsearch
 set hlsearch
+
+" ctags
+set tags=./tags;/
