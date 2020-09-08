@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#find . \( -name *.c -o -name *.h -o -name *.cxx -o -name *.mm \) -and -type f -printf '"%p"\n' \
+# | grep -v -E "\/\w+\-release" \
+# > cscope.files
+find . \( -name *.c -o -name *.h -o -name *.cxx -o -name *.mm \) -and -type f -printf '"%p"\n' \
+ > cscope.files
+cat cscope.files | sed -E 's/(^.)|(.$)//g' > ctags.files
+ctags -L ctags.files
+echo "ctags tags generation complete"
+cscope -b
+echo "cscope tags generation complete"
