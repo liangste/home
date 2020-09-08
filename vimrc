@@ -25,3 +25,6 @@ set hlsearch
 
 " ctags
 set tags=./tags;/
+
+" cscope
+set cscopetag
