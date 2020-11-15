@@ -28,3 +28,4 @@ set tags=./tags;/
 
 " cscope
 set cscopetag
+cscope add cscope.out
